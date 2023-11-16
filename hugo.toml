@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'http://kadirkeles.xyz'
 languageCode = 'en-us'
 title = 'AWS User Group Berlin'
 theme = "awsug"
