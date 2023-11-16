@@ -28,11 +28,10 @@
   --font-size-sidebar: 18px;
   --font-size-quote: 20px;
   --font-size-code: 16px;
-
 }
 
 body {
-  margin: 0%;
+  margin: 0px;
   background-color: var(--color-secondary-darknavy);
   color: var(--color-primary-white);
 }
@@ -41,3 +40,28 @@ a {
   text-decoration: none;
 }
 
+html,body {
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+@media (max-width: 769px) {
+  :root {
+    --font-size-h1: 32px;
+    --font-size-h2: 20px;
+    --font-size-h3: 18px;
+    --font-size-h4: 15px;
+    --font-size-body: 9px;
+    --font-size-blog: 10px;
+    --font-size-caption: 8px;
+    --font-size-button: 9px;
+    --font-size-navbar: 9px;
+    --font-size-footer: 8px;
+    --font-size-name: 11px;
+    --font-size-title: 8px;
+    --font-size-details: 8px;
+    --font-size-sidebar: 9px;
+    --font-size-quote: 10px;
+    --font-size-code: 8px;
+  }
+}
