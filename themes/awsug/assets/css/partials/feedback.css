@@ -1,0 +1,85 @@
+.feedback-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60vh;
+    background: linear-gradient(
+      115deg,
+      var(--color-secondary-darknavy) 0%,
+      var(--color-secondary-darknavy) 50%,
+      var(--color-secondary-purple) 51%,
+      var(--color-secondary-purple) 51%,
+      #2b245a 52%,
+      #2b245a 71%,
+      var(--color-secondary-blackpurple) 72%,
+      var(--color-secondary-blackpurple) 91%,
+      var(--color-secondary-darkpurple) 92%
+    );
+    border-bottom: 1px solid var(--color-primary-purple);
+  }
+  
+  .feedback-left {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .feedback-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 40%;
+  }
+  
+  .feedback-title {
+    font-size: var(--font-size-h3);
+    font-family: "Amazon Ember";
+    font-weight: bold;
+    color: var(--color-primary-white);
+    text-align: left;
+  }
+  
+  .feedback-text {
+    font-size: var(--font-size-quote);
+    font-family: "Bookerly LCD";
+    color: var(--color-primary-white);
+    font-weight: 300;
+    line-height: 155%;
+  }
+  
+  .feedback-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .feedback-button img {
+    max-width: 200px;
+  }
+  
+  .feedback-button-text {
+    position: absolute;
+    font-size: var(--font-size-blog);
+    font-weight: bold;
+    color: var(--color-primary-white);
+    font-family: "Amazon Ember";
+  }
+  
+  .feedback-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary-white);
+    border: 2px solid var(--color-primary-gray);
+    border-radius: 10px;
+  }
+  .feedback-item img {
+    border-radius: 10px;
+  }

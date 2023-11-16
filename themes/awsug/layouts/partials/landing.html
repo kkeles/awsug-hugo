@@ -1,0 +1,14 @@
+<!-- CSS Reference: /assets/css/partials/landing.css -->
+{{ $css := resources.Get "css/partials/landing.css" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">
+
+<div class="landing-section">
+    <div class="landing-left">
+        <h1 id="landing-slogan">{{ .landingSlogan }}</h1>
+        <h2 id="landing-sub-slogan">{{ .landingSubSlogan }}</h2>
+        <p id="landing-text">{{ .landingText }}</p>
+    </div>
+    <div class="landing-right">
+        <img src="/images/berlin.jpg" alt="AWS User Group Berlin Photo">
+    </div>
+  </div>

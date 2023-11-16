@@ -1,0 +1,39 @@
+.sponsors-section {
+    min-height: 300px;
+    border-top: 3px solid var(--color-secondary-blackpurple);
+    border-bottom: 3px solid var(--color-secondary-blackpurple);
+    background-color: var(--color-primary-white);
+    padding: 20px 0px;
+  }
+  
+  .sponsors-slogan {
+    font-family: "Bookerly LCD";
+    font-weight: 300;
+    font-size: var(--font-size-h4);
+    color: var(--color-primary-black);
+    text-align: center;
+  }
+  
+  .sponsor-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .sponsor-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-primary-white);
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--color-primary-gray);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    margin-left: 4%;
+  }
+  .sponsor-item img {
+    max-width: 90%;
+    padding: 5%;
+  }

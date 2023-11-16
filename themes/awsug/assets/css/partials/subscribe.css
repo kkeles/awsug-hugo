@@ -1,0 +1,83 @@
+.subscribe-section {
+    min-height: 300px;
+    border-top: 3px solid var(--color-secondary-blackpurple);
+    border-bottom: 3px solid var(--color-secondary-blackpurple);
+    background-color: var(--color-primary-white);
+    padding: 20px 0px;
+  }
+  
+  .subscribe-slogan {
+    font-family: "Bookerly LCD";
+    font-weight: 300;
+    font-size: var(--font-size-h4);
+    color: var(--color-primary-black);
+    text-align: center;
+  }
+  
+  .subscribe-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+  }
+  
+  .subscribe-left {
+    padding-left: 5%;
+    width: 50%;
+  }
+  
+  .subscribe-text {
+    font-family: "Bookerly LCD";
+    font-weight: 300;
+    font-size: var(--font-size-body);
+    color: var(--color-primary-black);
+    text-align: justify;
+  }
+  
+  .subscribe-right {
+    margin: 0% 10%;
+    width: 50%;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .subscribe-form-input {
+    background-color: transparent;
+    border: 2px solid #5a3472; 
+    border-radius: 25px; 
+    color: #5a3472; 
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 175px;
+    height: 30px;
+    outline: none;
+    text-align: center;
+    font-family: "Amazon Ember";
+    font-weight: bold;
+  }
+  
+  .subscribe-form-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .subscribe-form-button img {
+    width: auto;
+    height: 60px;
+  }
+  
+  .subscribe-form-button-text {
+    position: absolute;
+    font-size: var(--font-size-blog);
+    font-weight: bold;
+    color: var(--color-secondary-darkpurple);
+    font-family: "Amazon Ember";
+  }

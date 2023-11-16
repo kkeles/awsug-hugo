@@ -1,0 +1,40 @@
+{{ define "main" }} {{ $css := resources.Get "css/about.css" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+
+<div class="about-section">
+  <div class="about-left">
+    <div class="about-slogans">
+      <h3 id="about-intro-text">Your Intro Text Here</h3>
+      <h1 id="about-slogan-lineone">The First Line Of Your Slogan</h1>
+      <h1 id="about-slogan-linetwo">
+        Followed by Second Line Of Your Major Slogan 
+      </h1>
+    </div>
+    <div class="about-image">
+      <img src="/images/feedback.png" alt="" />
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="about-slogans">
+      <div id="about-slogan-linethree">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+          consectetur id ut veritatis, maxime esse unde perferendis dicta
+          reprehenderit aliquid suscipit itaque magni doloremque, consequatur
+          aperiam blanditiis placeat numquam officiis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+          consectetur id ut veritatis, maxime esse unde perferendis dicta
+          reprehenderit aliquid suscipit itaque magni doloremque, consequatur
+          aperiam blanditiis placeat numquam officiis!
+        </p>
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="/images/about-2.jpg" alt="" />
+    </div>
+  </div>
+</div>
+
+{{ end }}

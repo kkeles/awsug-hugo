@@ -1,0 +1,34 @@
+<!-- CSS Reference: /assets/css/partials/team-member.css -->
+{{ $css := resources.Get "css/partials/team-member.css" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" />
+
+<div class="team-member">
+    <div class="member-photo">
+      <img src="/images/team/{{ .memberPhoto }}" alt="" />
+    </div>
+    <div class="member-info-box">
+      <div class="member-badge">
+        <h3 class="member-name">{{ .memberName }}</h3>
+        <h4 class="member-title">{{ .memberTitle }}</h4>
+      </div>
+      <div class="member-details">
+        {{ range .memberDetails}}
+        <p>{{ . }}</p>
+        {{ end }}
+      </div>
+      <div class="member-buttons">
+        <a href="https://linkedin.com/in/{{ .memberLinkedIn }}">
+          <div class="member-button">
+            <img src="/images/button-white.png" alt="Linkedin profile button" />
+            <span class="member-button-text">LinkedIn</span>
+          </div>
+        </a>
+        <a href="mailto:{{ .memberMail }}">
+          <div class="member-button">
+            <img src="/images/button-white.png" alt="Linkedin profile button" />
+            <span class="member-button-text">Contact</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>

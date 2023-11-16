@@ -1,0 +1,37 @@
+<!-- CSS Reference: /assets/css/partials/subscribe.css -->
+{{ $css := resources.Get "css/partials/subscribe.css" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" />
+
+
+<div class="subscribe-section">
+    <div class="subscribe-slogan">
+      <p>Subscribe to our Newsletter</p>
+    </div>
+    <div class="subscribe-items">
+      <div class="subscribe-left">
+        <p class="subscribe-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+          adipisci laborum expedita ducimus, sed dolorum, placeat amet
+          mollitia architecto natus saepe enim.
+        </p>
+      </div>
+      <div class="subscribe-right">
+        <form class="subscribe-form">
+          <input
+            type="text"
+            class="subscribe-form-input"
+            placeholder="Your Name"
+          />
+          <input
+            type="email"
+            class="subscribe-form-input"
+            placeholder="Your Email"
+          />
+          <button type="submit" class="subscribe-form-button">
+            <img src="./images/button-darkpurple.png" />
+            <span class="subscribe-form-button-text">Subscribe</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>

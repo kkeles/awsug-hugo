@@ -1,0 +1,33 @@
+  <div class="container header-container">
+    <div class="logo">
+      <img src="/images/logo.png" alt="{{ .Title }}" />
+    </div>
+    <!-- Navigation menu -->
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    <div class="spacer"></div>
+  </div>
+
+<!-- ORIGINAL CONTENT 
+    
+    <h1>{{ site.Title }}</h1>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }} -->
+<!-- PREVIOUS CONTENT 
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="./images/logo.png" alt="{{ .Title }}">
+        </div>
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="{{ .Site.BaseURL }}">Home</a></li>
+                <li class="nav-item"><a href="{{ .Site.BaseURL }}about">About</a></li>
+                <li class="nav-item"><a href="{{ .Site.BaseURL }}team">Team</a></li>
+                <li class="nav-item"><a href="{{ .Site.BaseURL }}blog">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="spacer">
+            {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+        </div> 
+    </div>
+</header>
+-->

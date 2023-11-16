@@ -1,0 +1,45 @@
+.actions-section {
+    padding-bottom: 2%;
+    border-bottom: 1px solid var(--color-primary-purple);
+  }
+  
+  .action-slogan {
+    font-family: "Bookerly LCD";
+    font-weight: 300;
+    font-size: var(--font-size-h4);
+    color: var(--color-primary-white);
+    text-align: center;
+  }
+  
+  .action-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .action-item {
+    position: relative;
+    display: flex;
+    width: 40%;
+  }
+  
+  .action-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .action-item h4 {
+    font-size: var(--font-size-h4);
+    font-family: "Amazon Ember";
+    color: var(--color-primary-white);
+    position: relative;
+    top: -50%;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .action-item h4:hover {
+    color: var(--color-primary-gray);
+  }

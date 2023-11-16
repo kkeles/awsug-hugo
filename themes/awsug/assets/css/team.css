@@ -1,0 +1,11 @@
+:root {
+  --circle-size: 125px;
+  --box-width: 17vw;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 1vw;
+    padding: 3% 0%;
+}
