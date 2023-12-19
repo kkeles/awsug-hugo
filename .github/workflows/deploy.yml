@@ -33,4 +33,4 @@ jobs:
 
       # Deploys built website to S3
       - name: Deploy to Site
-        run: hugo deploy --maxDeletes -1 --invalidateCDN
+        run: hugo deploy --maxDeletes 0 --invalidateCDN
