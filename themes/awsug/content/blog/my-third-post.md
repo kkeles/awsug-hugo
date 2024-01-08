@@ -1,6 +1,7 @@
 +++
-title = 'Post 2'
-date = 2023-02-15T10:00:00-07:00
+title = 'My Third Post'
+date = 2023-03-15T10:00:00-07:00
+thumbnailURL = 'https://secure.meetupstatic.com/photos/event/7/c/9/7/600_495151895.webp?w=384'
 draft = false
 tags = ['red','green']
 +++
