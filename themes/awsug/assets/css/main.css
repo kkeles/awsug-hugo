@@ -45,6 +45,22 @@ html,body {
   overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
+.round-icon {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: white solid 1px;
+  border-radius: 100%;
+}
+
+.round-icon img {
+  width: 20px;
+  height: 20px;
+}
+
 @media (max-width: 769px) {
   :root {
     --font-size-h1: 32px;

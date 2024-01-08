@@ -1,0 +1,65 @@
+.eventsMainTitle {
+	text-align: center;
+	font-family: 'Amazon Ember';
+	font-weight: 900;
+	font-size: var(--font-size-h3);
+	color: var(--color-primary-gray);
+}
+
+#eventsGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: start;
+	justify-items: center;
+	list-style-type: none;
+	padding: 0 100px;
+	margin: 0;
+	gap: 10px;
+}
+
+.eventObject {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+    margin-top: 50px;
+}
+
+.eventTitle{
+    font-family: "Amazon Ember";
+    font-size: var(--font-size-name);
+	color: var(--color-primary-white);
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 5px;
+}
+
+.eventBanner {
+	height: 500px;
+	width: 500px;
+	margin-top: 0px;
+    object-fit: contain;
+    border: 2px solid var(--color-primary-gray);
+	border-radius: 10px;
+}
+
+.eventInfo {
+	display: flex;
+	align-items: center;
+}
+
+.eventInfoIcon {
+	margin-top: 10px;
+}
+
+.eventInfoText {
+	font-family: "Amazon Ember Display";
+    font-size: var(--font-size-details);
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+a {
+	color: var(--color-primary-gray);
+}
+
+

@@ -20,10 +20,6 @@ header img {
   display: flex;
 }
 
-.nav-item {
-  margin-right: 20px; 
-}
-
 .header-container {
   display: flex;
   align-items: center;
@@ -50,10 +46,11 @@ header img {
 .nav-item {
   font-family: "Amazon Ember";
   font-weight: 600;
+  font-size: var(--font-size-navbar);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-primary-white);
-  font-size: var(--font-size-navbar);
+  margin-right: 20px;
 }
 
 .nav-item :hover {
@@ -62,7 +59,11 @@ header img {
 
 .nav-item a {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-primary-white);
+}
+
+.active a{
+  color: var(--color-primary-yellow)
 }
 
 .spacer {

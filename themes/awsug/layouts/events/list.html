@@ -1,0 +1,75 @@
+{{ define "main" }} {{ $css := resources.Get "css/events.css" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+
+{{ .Content }}
+<h2 class="eventsMainTitle">Our Upcoming Events</h2>
+<ul id="eventsGrid">
+	{{ range sort .Pages "Params.eventDate" "asc" }} {{ if ge .Params.eventDate now }}
+	<li class="eventObject">
+		<h2 class="eventTitle">{{ .Title }}</h2>
+		{{ if and .Params.bannerURL (strings.HasPrefix .Params.bannerURL "https://") }}
+		<a href="{{ .Params.eventURL }}">
+			<img class="eventBanner" src="{{ .Params.bannerURL }}" alt="{{ .Title }} Banner" />
+		</a>
+		{{ else }}
+		<a href="{{ .Params.eventURL }}">
+			<div class="eventBannerContainer">
+				{{ with .Resources.GetMatch "*.png" }}
+				<img class="eventBanner" src="{{ .RelPermalink }}" alt="{{ .Title }} Banner" />
+				{{ end }}
+			</div>
+		</a>
+		{{ end }}
+		<div class="eventInfo">
+			<div class="eventInfoIcon">
+				<img src="/images/icons/date.png" alt="" />
+			</div>
+			<div class="eventInfoText">{{ dateFormat "January 2, 2006" .Params.eventDate }} - {{ .Params.eventTime }}</div>
+		</div>
+		<div class="eventInfo">
+			<div class="eventInfoIcon">
+				<img src="/images/icons/host.png" alt="" />
+			</div>
+			<div class="eventInfoText">Hosted by {{ .Params.eventHost }}</div>
+		</div>
+	</li>
+	{{ end }} {{ end }}
+</ul>
+
+<h2 class="eventsMainTitle">Our Past Events</h2>
+<ul id="eventsGrid">
+	{{ range sort .Pages "Params.eventDate" "desc" }} {{ if lt .Params.eventDate now }}
+	<li class="eventObject">
+		<h2 class="eventTitle">{{ .Title }}</h2>
+		{{ if and .Params.bannerURL (strings.HasPrefix .Params.bannerURL "https://") }}
+		<a href="{{ .Params.eventURL }}">
+			<img class="eventBanner" src="{{ .Params.bannerURL }}" alt="{{ .Title }} Banner" />
+		</a>
+		{{ else }}
+
+		<a href="{{ .Params.eventURL }}">
+			<div class="eventBannerContainer">
+				{{ with .Resources.GetMatch "*.png" }}
+				<img class="eventBanner" src="{{ .RelPermalink }}" alt="{{ .Title }} Banner" />
+				{{ end }}
+			</div>
+		</a>
+
+		{{ end }}
+		<div class="eventInfo">
+			<div class="eventInfoIcon">
+				<img src="/images/icons/date.png" alt="" />
+			</div>
+			<div class="eventInfoText">{{ dateFormat "January 2, 2006" .Params.eventDate }} - {{ .Params.eventTime }}</div>
+		</div>
+		<div class="eventInfo">
+			<div class="eventInfoIcon">
+				<img src="/images/icons/host.png" alt="" />
+			</div>
+			<div class="eventInfoText">Hosted by {{ .Params.eventHost }}</div>
+		</div>
+	</li>
+	{{ end }} {{ end }}
+</ul>
+
+{{ end }}
