@@ -46,7 +46,6 @@
 			<img class="eventBanner" src="{{ .Params.bannerURL }}" alt="{{ .Title }} Banner" />
 		</a>
 		{{ else }}
-
 		<a href="{{ .Params.eventURL }}">
 			<div class="eventBannerContainer">
 				{{ with .Resources.GetMatch "*.png" }}
@@ -54,7 +53,6 @@
 				{{ end }}
 			</div>
 		</a>
-
 		{{ end }}
 		<div class="eventInfo">
 			<div class="eventInfoIcon">

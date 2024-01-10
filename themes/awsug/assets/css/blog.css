@@ -34,7 +34,9 @@
 	border-radius: 10px;
 }
 
-.blogSummary {
+.blogIntro {
+	font-family: 'Amazon Ember';
+	font-weight: 300;
     width: 750px;
     text-align: justify;
 }

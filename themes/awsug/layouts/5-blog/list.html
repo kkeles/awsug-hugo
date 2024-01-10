@@ -3,13 +3,19 @@
 
 {{ .Content }}
 <ul id="blogsGrid">
-	{{ range .Pages.ByPublishDate  }}
+	{{ range .Pages.ByPublishDate }}
 	<li class="blogObject">
 		<a href="{{ .RelPermalink }}"
 			><h2 class="blogTitle">{{ .LinkTitle }}</h2>
+			{{ if and .Params.thumbnailURL (strings.HasPrefix .Params.thumbnailURL "https://") }}
 			<img class="blogBanner" src="{{ .Params.thumbnailURL }}" alt="{{ .Title }} Banner" />
+			{{ else }} {{ with .Resources.GetMatch "banner.png" }}
+			<img class="blogBanner" src="{{ .RelPermalink }}" alt="{{ .Title }} Banner" />
+			<!-- prettier-ignore -->
+			{{ end }} 
+	{{ end }}
 		</a>
-		<p class="blogSummary" >{{ .Summary }}</p>
+		<p class="blogIntro">{{ .Params.blogIntro }}</p>
 	</li>
 	{{end}}
 </ul>
