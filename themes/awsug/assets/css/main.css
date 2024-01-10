@@ -61,6 +61,10 @@ html,body {
   height: 20px;
 }
 
+.warm-img-filter {
+  filter: sepia(30%) hue-rotate(330deg) brightness(110%);
+}
+
 @media (max-width: 769px) {
   :root {
     --font-size-h1: 32px;
