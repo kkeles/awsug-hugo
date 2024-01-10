@@ -1,6 +1,73 @@
+:root {
+	--image-height: 500px;
+}
+
 .about-section {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 500px 400px ;
+	grid-template-columns: 2fr 1fr;
+	column-gap: 50px;
 	padding: 1% 5%;
 }
+
+/* #region TEXT STYLING */
+.text-area {
+	min-height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+#top-mini-slogan {
+	font-size: var(--font-size-quote);
+	font-family: "Bookerly LCD";
+	font-weight: 300;
+	margin-top: 2%;
+}
+
+#slogan-first {
+	font-size: var(--font-size-h2);
+	font-family: "Amazon Ember";
+	font-weight: bold;
+	margin: 0;
+	margin-top: 2%;
+}
+
+#slogan-second {
+	font-size: var(--font-size-h4);
+	font-family: "Amazon Ember";
+	margin: 0;
+	margin-top: 2%;
+}
+
+.intro-text {
+	font-size: 16px;
+	font-family: "Bookerly LCD";
+	font-weight: 300;
+	line-height: 140%;
+	text-align: justify;
+	margin-top: 40px;
+}
+
+/* #endregion */
+
+/* #region IMAGES STYLING */
+.about-left > .about-image img {
+	height: var(--image-height);
+	width: 80%;
+	object-fit: cover;
+	margin-top: 0px;
+	border: 2px solid var(--color-primary-gray);
+	border-radius: 10px;
+}
+
+.about-right > .about-image img {
+	width: auto;
+	height: var(--image-height);
+	aspect-ratio: 1;
+	object-fit: cover;
+	object-position: 50% 50%;
+	border: 2px solid var(--color-primary-gray);
+	border-radius: 10px;
+}
+
+/* #endregion */

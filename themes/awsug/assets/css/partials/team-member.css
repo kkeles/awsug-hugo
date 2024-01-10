@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: flex-start;
   }
   
   .member-photo {
@@ -26,11 +27,11 @@
   }
   
   .member-info-box {
-    height: calc(var(--box-width)* 1.5);
+    height: 400px;
     width: var(--box-width);
     border: 1px solid var(--color-primary-purple);
     border-radius: 5%;
-    padding-top: calc(var(--circle-size) * 0.40);
+    padding-top: calc(var(--circle-size) * 0.4);
     text-align: center;
   }
   

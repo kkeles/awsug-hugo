@@ -1,7 +1,15 @@
 :root {
   --circle-size: 125px;
-  --box-width: 17vw;
+  --box-width: 250px;
 }
+
+.team-title {
+	font-size: var(--font-size-h3);
+	font-family: "Amazon Ember";
+	font-weight: bold;
+  text-align: center;
+	margin: 0;
+	margin-top: 2%;}
 
 .team-members {
     display: grid;
