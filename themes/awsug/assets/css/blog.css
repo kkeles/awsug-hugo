@@ -28,15 +28,38 @@
 
 .blogBanner {
 	height: 300px;
-	width: 750px;
+	width: 40vw;
 	object-fit: cover;
 	border: 2px solid var(--color-primary-gray);
 	border-radius: 10px;
 }
 
-.blogIntro {
+.blogAbstract {
 	font-family: 'Amazon Ember';
 	font-weight: 300;
     width: 750px;
     text-align: justify;
+}
+
+.blogInfoArea {
+	display: flex;
+	flex-direction: row;
+	margin-top: 5px;
+}
+
+.blogInfo {
+	display: flex;
+	align-items: center;
+	margin-right: 75px;
+}
+
+.blogInfoIcon {
+	margin-top: 10px;
+}
+
+.blogInfoText {
+	font-family: "Amazon Ember Display";
+    font-size: var(--font-size-details);
+	margin-top: 10px;
+	margin-left: 10px;
 }

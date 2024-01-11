@@ -1,7 +1,9 @@
 +++
 title = 'My Last Post'
-date = 2024-01-07T10:00:00-07:00
+date = 2024-01-07
 thumbnailURL = 'https://secure.meetupstatic.com/photos/event/7/c/9/7/600_495151895.webp?w=384'
+abstract = ' '
+author = 'Timur Bublik'
 draft = false
 tags = ['red','green']
 +++

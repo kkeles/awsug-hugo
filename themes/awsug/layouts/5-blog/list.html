@@ -3,7 +3,7 @@
 
 {{ .Content }}
 <ul id="blogsGrid">
-	{{ range .Pages.ByPublishDate }}
+	{{ range .Pages.ByPublishDate.Reverse }}
 	<li class="blogObject">
 		<a href="{{ .RelPermalink }}"
 			><h2 class="blogTitle">{{ .LinkTitle }}</h2>
@@ -15,7 +15,21 @@
 			{{ end }} 
 	{{ end }}
 		</a>
-		<p class="blogIntro">{{ .Params.blogIntro }}</p>
+		<div class="blogAbstract">{{ .Params.abstract }}</div>
+		<div class="blogInfoArea">
+			<div class="blogInfo">
+				<div class="blogInfoIcon">
+					<img src="/images/icons/author.png" alt="" />
+				</div>
+				<div class="blogInfoText">{{ .Params.author }}</div>
+			</div>
+			<div class="blogInfo">
+				<div class="blogInfoIcon">
+					<img src="/images/icons/date.png" alt="" />
+				</div>
+				<div class="blogInfoText">{{ dateFormat "January 2, 2006" .Params.date }}</div>
+			</div>
+		</div>
 	</li>
 	{{end}}
 </ul>

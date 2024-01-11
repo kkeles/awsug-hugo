@@ -71,3 +71,54 @@
 }
 
 /* #endregion */
+
+/* #region RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+	.about-section {
+		grid-template-columns: 1fr;
+		padding: 1% 3%;
+	}
+
+	.about-left,
+	.about-right {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.about-image {
+		width: 100%;
+		order: 2;
+	}
+
+	.text-area {
+		order: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	:root {
+		--image-height: 300px;
+	}
+
+	.text-area {
+		min-height: 150px;
+	}
+
+	.about-section {
+		padding: 1% 25px;
+	}
+
+	.about-image img {
+		margin: 10px 0px;
+		width: 100% !important;
+	}
+
+	#top-mini-slogan,
+	#slogan-first,
+	#slogan-second {
+		font-size: 20px;
+		text-align: justify;
+	}
+}
+
+/* #endregion */
