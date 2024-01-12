@@ -40,11 +40,11 @@ visit [AWS UG Berlin website](https://aws-user-group.berlin/) to examine the lat
 ### Configuration
 *Please ignore theme.toml as it's related to this project but can remain as is for your website.*
 <br>**hugo.toml** is your main configuration file:
-`<br>- baseURL: main domain you use for your website ('https://example.com').
-- languageCode: to define the language(s) of your website. Use ISO 639-1 convention ('en-us','de-at').  
+<br>- baseURL: main domain you use for your website ('https://example.com').
+<br>- languageCode: to define the language(s) of your website. Use ISO 639-1 convention ('en-us','de-at').  
 <br>- title: title of your website ('AWS User Group Brussels')
 <br>- theme = "awsug" *please keep it as is*
-<br>- summaryLength: number of words to appear in blog summary ('35').`
+<br>- summaryLength: number of words to appear in blog summary ('35').
 
 <br> [menu]: define menu elements for navigation. [[menu.main]] refers to a particular menu element used, main is the identifier of the menu. In future, you can create [[menu.mobile]] or [[menu.french]] for example.
 <br>   [[menu.main]]
