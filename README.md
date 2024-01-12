@@ -113,7 +113,8 @@ Similar to assets folder, but mainly for media files and similer types. Once dep
 
 Similar use can be applied for different file types as well.
 
-* Caution: Do not add ./ or absolute URL to your images. Rather, use relative permalink as shared in the example above.
+> [!CAUTION] 
+> Do not add ./ or absolute URL to your images. Rather, use relative permalink as shared in the example above.
 
 
 ## License & Contact
