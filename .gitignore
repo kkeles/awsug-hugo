@@ -13,7 +13,7 @@ hugo.linux
 /.hugo_build.lock
 
 # local IDE
-awsugo2.code-workspace
+*.code-workspace
 
 # DS_Store
 .DS_Store
