@@ -47,11 +47,11 @@ visit [AWS UG Berlin website](https://aws-user-group.berlin/) to examine the lat
 <br>- summaryLength: number of words to appear in blog summary ('35').
 
 <br> [menu]: define menu elements for navigation. [[menu.main]] refers to a particular menu element used, main is the identifier of the menu. In future, you can create [[menu.mobile]] or [[menu.french]] for example.
-<br>   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 20
+	`[[menu.main]]
+	    identifier = "about"
+	    name = "About"
+	    url = "/about/"
+	    weight = 20`
 
 
 ## License
