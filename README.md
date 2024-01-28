@@ -1,4 +1,4 @@
-![AWS User Groups Logo](./static/images/uglogo.png)
+![AWS User Groups Logo](./img/uglogo.png)
 # Website Template for AWS User Groups
 
 ## Introduction
