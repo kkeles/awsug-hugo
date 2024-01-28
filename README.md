@@ -14,6 +14,7 @@ visit [AWS UG Berlin website](https://aws-user-group.berlin/) to examine the lat
 | Kadir Keles  | October 2023   |
 | Aaron Walker | December 2023    |
 | Jacob Moracha    | January 2024   |
+| Manuel Vogel    | January 2024   |
 
 *Want to contribute? Mail us with a short introduction:* kadir@berlinawsug.de
 
@@ -32,9 +33,29 @@ visit [AWS UG Berlin website](https://aws-user-group.berlin/) to examine the lat
 * [git](https://git-scm.com/downloads) 
 
 ### Quick Start
-* clone the project to your local device: `git clone https://github.com/kkeles/awsug-hugo`
-* navigate to project folder in your terminal. Test by running: `hugo server` - visit `localhost:1313` in your web browser. You should see the website up & running
-* You can also use `hugo server` for development. Change content, edit templates and layout in /themes/awsug folder and follow the updates at localhost:1313 
+For User Groups which want to use the template as well (adapted from the official [hugo quickstart](https://gohugo.io/getting-started/quick-start/#commands))
+
+* Get the theme and use it
+```bash
+hugo new site awsug-your-town
+cd awsug-your-town
+git init
+git submodule add https://github.com/kkeles/awsug-hugo.git themes/awsug
+```
+* preview the example site
+```bash
+cd themes/awsug/exampleSite/
+hugo server --themesDir ../..
+```
+* Then visit `localhost:1313` in your browser, to see the site, which is the them from Berlin AWS UG :tada:
+* If your happy use it as a baseline
+```bash
+# copy the whole exampleSite 
+cp -r themes/awsug/exampleSite/* .
+hugo server
+```
+
+Visit `localhost:1313` in your browser again, start adapting and enjoy the hot-reloading.
 
 ## Usage
 ### Configuration & Menu Items
