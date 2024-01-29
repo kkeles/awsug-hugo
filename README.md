@@ -44,8 +44,8 @@ git submodule add https://github.com/kkeles/awsug-hugo.git themes/awsug
 ```
 * preview the example site
 ```bash
-cd themes/awsug/exampleSite/
-hugo server --themesDir ../..
+# Note '--themesDir' is relative to the directory defined by --source
+hugo server --source themes/awsug/exampleSite --themesDir ../..
 ```
 * Then visit `localhost:1313` in your browser, to see the site, which is the them from Berlin AWS UG :tada:
 * If your happy use it as a baseline
