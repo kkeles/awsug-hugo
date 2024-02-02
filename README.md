@@ -41,6 +41,10 @@ hugo new site awsug-your-town
 cd awsug-your-town
 git init
 git submodule add https://github.com/kkeles/awsug-hugo.git themes/awsug
+# set the branch for the next checkout
+git submodule set-branch --branch v1.2.0 themes/awsug
+# set the tag explicitly (as the command above does not do the checkout for the tag. default to master=
+cd themes/awsug && git checkout v1.2.0 && cd ../..
 ```
 * preview the example site
 ```bash
