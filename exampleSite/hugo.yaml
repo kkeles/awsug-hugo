@@ -1,0 +1,26 @@
+baseURL: 'https://aws-user-group.berlin/'
+languageCode: 'en-us'
+title: 'AWS User Group Berlin'
+summaryLength: '35'
+menu:
+  main:
+    - identifier: "home"
+      name: "Home"
+      url: "/"
+      weight: 10
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: 20
+    - identifier: "team"
+      name: "Team"
+      url: "/team/"
+      weight: 30
+    - identifier: "events"
+      name: "Events"
+      url: "/events/"
+      weight: 40
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 50
