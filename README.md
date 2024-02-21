@@ -31,35 +31,85 @@ visit [AWS UG Berlin website](https://aws-user-group.berlin/) to examine the lat
 * [Hugo](https://gohugo.io/installation/)
 * any IDE: [*](https://www.jetbrains.com/webstorm/download) [*](https://code.visualstudio.com/download) [*](https://www.vim.org/download.php) [*](https://atom-editor.cc/)
 * [git](https://git-scm.com/downloads) 
+* [golang](https://go.dev/)
 
 ### Quick Start
 For User Groups which want to use the template as well (adapted from the official [hugo quickstart](https://gohugo.io/getting-started/quick-start/#commands))
 
-* Get the theme and use it
+- Get the theme and use it (for details regarding the)
 ```bash
-hugo new site awsug-your-town
+# create the new site
+hugo new site --format yaml awsug-your-town
 cd awsug-your-town
-git init
-git submodule add https://github.com/kkeles/awsug-hugo.git themes/awsug
-# set the branch for the next checkout
-git submodule set-branch --branch v1.2.0 themes/awsug
-# set the tag explicitly (as the command above does not do the checkout for the tag. default to master=
-cd themes/awsug && git checkout v1.2.0 && cd ../..
+# initialize the hugo mod system
+hugo mod init github.com/johndoe/aws-user-group.your-town
+# add the theme
+hugo mod get github.com/kkeles/awsug-hugo
 ```
-* preview the example site
-```bash
-# Note '--themesDir' is relative to the directory defined by --source
-hugo server --source themes/awsug/exampleSite --themesDir ../..
+- preview the example site by first adapting the `hugo.yaml`
+```yaml
+module:
+  imports:
+  - path: 'github.com/kkeles/awsug-hugo'
+	  mounts:
+	  - source: archetypes
+	    target: archetypes
+	  - source: assets
+	    target: assets
+	  - source: layouts
+	    target: layouts
+	  - source: static
+	    target: static
+	  - source: exampleSite/content
+	    target: content
 ```
-* Then visit `localhost:1313` in your browser, to see the site, which is the them from Berlin AWS UG :tada:
-* If your happy use it as a baseline
+- run it
 ```bash
-# copy the whole exampleSite 
-cp -r themes/awsug/exampleSite/* .
+hugo server --disableFastRender
+```
+- Then visit `localhost:1313` in your browser, to see the exampleSite, which is the one from Berlin AWS UG :tada:
+
+
+If your happy use it as a baseline and copy it over
+```bash
+git clone git@github.com:kkeles/awsug-hugo.git /tmp/awsug-hugo2
+# assuming your still in 'awsug-your-town'
+cp -r /tmp/awsug-hugo/exampleSite/content/* content/
 hugo server
 ```
+- remove the 2 lines of the mount from the `hugo.yaml`
+```yaml
+- source: exampleSite/content
+  target: content
+```
+- and add the menu section to the `hugo.yaml`, so it is correctly displayed
+```yaml
+summaryLength: '35'
+menu:
+  main:
+    - identifier: "home"
+      name: "Home"
+      url: "/"
+      weight: 10
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: 20
+    - identifier: "team"
+      name: "Team"
+      url: "/team/"
+      weight: 30
+    - identifier: "events"
+      name: "Events"
+      url: "/events/"
+      weight: 40
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 50
+```
 
-Visit `localhost:1313` in your browser again, start adapting and enjoy the hot-reloading.
+Visit `localhost:1313` in your browser again, start adapting your `content` and enjoy the hot-reloading.
 
 ## Usage
 ### Configuration & Menu Items
