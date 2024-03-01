@@ -1,8 +1,23 @@
-baseURL = 'https://aws-user-group.berlin/'
+name = 'AWS User Group Theme'
+license = 'MIT'
+licenselink = 'https://github.com/kkeles/awsug-hugo/LICENSE'
+description = 'Common theme for websites of AWS User Groups'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/kkeles/awsug-hugo'
+
+# If you have a running demo of the theme
+demosite = 'https://aws-user-group.berlin'
+
+# If the theme has a single author
+[author]
+  name = 'Kadir Keles'
+  homepage = 'https://kadirkeles.com'
+
 languageCode = 'en-us'
 title = 'AWS User Group Berlin'
 theme = "awsug"
-summaryLength = '35'
+summaryLength = '70'
 
 [menu]
   [[menu.main]]
@@ -30,10 +45,3 @@ summaryLength = '35'
     name = "Blog"
     url = "/blog/"
     weight = 50
-
-[deployment]
-
-[[deployment.targets]]
-name = "production"
-URL = "s3://aws-user-group.berlin?region=eu-central-1"
-cloudFrontDistributionID = "E2RPNIMVK40BRV"
