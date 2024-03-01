@@ -1,4 +1,3 @@
-baseURL = 'https://aws-user-group.berlin/'
 languageCode = 'en-us'
 title = 'AWS User Group Berlin'
 theme = "awsug"
@@ -30,10 +29,3 @@ summaryLength = '35'
     name = "Blog"
     url = "/blog/"
     weight = 50
-
-[deployment]
-
-[[deployment.targets]]
-name = "production"
-URL = "s3://aws-user-group.berlin?region=eu-central-1"
-cloudFrontDistributionID = "E2RPNIMVK40BRV"
