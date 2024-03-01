@@ -1,0 +1,147 @@
+.feedback-section {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 500px;
+	border-top: 3px solid var(--cols-darkpurple);
+	border-bottom: 3px solid var(--cols-darkpurple);
+}
+
+.feedback-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+.feedback-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--colp-white);
+	border: 2px solid var(--colp-gray);
+	border-radius: 10px;
+}
+.feedback-image img {
+	border-radius: 10px;
+	width: 100%;
+}
+
+.feedback-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+	width: 40%;
+}
+
+#feedback-title {
+	width: 100%;
+	font-size: 1.75rem;
+	font-family: "Amazon Ember Wide";
+	font-weight: bold;
+	color: var(--colp-white);
+	text-align: left;
+}
+
+#feedback-text {
+	font-size: var(--font-size-quote);
+	font-family: "Bookerly LCD";
+	color: var(--colp-white);
+	font-weight: 300;
+	line-height: 155%;
+	text-align: justify;
+}
+
+#feedback-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+	width: 80%;
+}
+
+#feedback-button img {
+	width: 50%;
+}
+
+#feedback-button p {
+	position: absolute;
+	font-size: var(--font-size-blog);
+	font-weight: bold;
+	color: var(--colp-white);
+	font-family: "Amazon Ember";
+}
+
+/* Laptop Size: 1024-1440px */
+@media (max-width: 1440px) {
+	.feedback-section {
+		height: 500px;
+	}
+
+  #feedback-button img {
+		width: 60%;
+	}
+}
+
+/* Mobile Size: 478-768px */
+@media (max-width: 768px) {
+	.feedback-section {
+		flex-direction: column;
+		height: 700px;
+	}
+
+	.feedback-left,
+	.feedback-right {
+		width: 100%;
+	}
+
+	#feedback-button {
+		font-size: 1.25rem;
+	}
+
+	.feedback-image {
+		width: 90%;
+	}
+  #feedback-button img {
+		width: 40%;
+	}
+}
+
+/* Mobile Size: 360-477px */
+@media (max-width: 478px) {
+	.feedback-section {
+		height: 630px;
+	}
+	#feedback-title {
+		font-size: 1.5rem;
+	}
+	#feedback-text {
+		font-size: 1rem;
+	}
+	#feedback-button {
+		font-size: 1rem;
+	}
+	#feedback-button img {
+		width: 50%;
+	}
+}
+
+/* Mini Mobile Size: below 360px  */
+@media (max-width: 360px) {
+	.feedback-section {
+		height: 500px;
+	}
+	#feedback-title {
+		font-size: 1.125rem;
+	}
+	#feedback-text {
+		font-size: 0.75rem;
+	}
+	#feedback-button {
+		font-size: 0.75rem;
+	}
+}

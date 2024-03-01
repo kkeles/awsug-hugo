@@ -1,0 +1,83 @@
+{{ define "main" }} {{ $css := resources.Get "css/events.css" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+
+<div class="events-section bottom-border">
+	<section id="upcoming-events">
+		<h2 class="events-main-title">Our Upcoming Events</h2>
+		<ul class="events-grid">
+			{{ range sort .Pages "Params.eventDate" "asc" }} {{ if ge .Params.eventDate now }}
+			<li class="event-object">
+				<h2 class="event-title">{{ .Title }}</h2>
+				{{ if and .Params.bannerURL (strings.HasPrefix .Params.bannerURL "https://") }}
+				<a href="{{ .Params.eventURL }}">
+					<img class="event-banner" src="{{ .Params.bannerURL }}" alt="{{ .Title }} Banner" />
+				</a>
+				{{ else }}
+				<a href="{{ .Params.eventURL }}">
+					<div class="event-banner-container">
+						{{ with .Resources.GetMatch "*.png" }}
+						<img class="event-banner" src="{{ .RelPermalink }}" alt="{{ .Title }} Banner" />
+						{{ end }}
+					</div>
+				</a>
+				{{ end }}
+				<div class="event-info">
+					<div class="event-info-icon">
+						<img src="/images/icons/date.png" alt="" />
+					</div>
+					<div class="event-info-text">
+						{{ dateFormat "January 2, 2006" .Params.eventDate }} - {{ .Params.eventTime }}
+					</div>
+				</div>
+				<div class="event-info">
+					<div class="event-info-icon">
+						<img src="/images/icons/host.png" alt="" />
+					</div>
+					<div class="event-info-text">Hosted by {{ .Params.eventHost }}</div>
+				</div>
+			</li>
+			{{ end }} {{ end }}
+		</ul>
+	</section>
+
+	<section id="past-events">
+		<h2 class="events-main-title">Our Past Events</h2>
+		<ul class="events-grid bottom-border">
+			{{ range sort .Pages "Params.eventDate" "desc" }} {{ if lt .Params.eventDate now }}
+			<li class="event-object">
+				<h2 class="event-title">{{ .Title }}</h2>
+				{{ if and .Params.bannerURL (strings.HasPrefix .Params.bannerURL "https://") }}
+				<a href="{{ .Params.eventURL }}">
+					<img class="event-banner" src="{{ .Params.bannerURL }}" alt="{{ .Title }} Banner" />
+				</a>
+				{{ else }}
+				<a href="{{ .Params.eventURL }}">
+					<div class="event-banner-container">
+						{{ with .Resources.GetMatch "*.png" }}
+						<img class="event-banner" src="{{ .RelPermalink }}" alt="{{ .Title }} Banner" />
+						{{ end }}
+					</div>
+				</a>
+				{{ end }}
+				<div class="event-info">
+					<div class="event-info-icon">
+						<img src="/images/icons/date.png" alt="" />
+					</div>
+					<div class="event-info-text">
+						{{ dateFormat "January 2, 2006" .Params.eventDate }} - {{ .Params.eventTime }}
+					</div>
+				</div>
+				<div class="event-info">
+					<div class="event-info-icon">
+						<img src="/images/icons/host.png" alt="" />
+					</div>
+					<div class="event-info-text">Hosted by {{ .Params.eventHost }}</div>
+				</div>
+			</li>
+			{{ end }} {{ end }}
+		</ul>
+	</section>
+	<section id="contribute">{{ partial "contribute.html" .}}</section>
+</div>
+
+{{ end }}

@@ -1,0 +1,82 @@
+/* General & 1440px+ */
+.landing-section {
+	display: block;
+	overflow: hidden;
+  min-height: 768px;
+  background-image: url("/images/landingbg-desktop.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#landing-body {
+  width: 55%;
+  margin-top: 8%;
+}
+
+#landing-slogan {
+	font-family: "Amazon Ember Wide";
+	font-weight: bold;
+  font-size: 4rem;
+	padding: 0%;
+}
+
+#landing-sub-slogan {
+	font-family: "Amazon Ember Wide";
+  font-size: 2.5rem;
+}
+
+#landing-text {
+	font-size: var(--font-size-quote);
+	font-family: "Bookerly LCD";
+	font-weight: 300;
+  font-size: 1.5rem;
+	line-height: 155%;
+  text-align: justify;
+}
+
+
+/* Laptop Size: 1024-1440px */
+@media (max-width: 1440px) {
+.landing-section {
+  min-height: 478px;
+}
+
+#landing-slogan {font-size: 2.75rem ;}
+#landing-sub-slogan {font-size: 2rem ;}
+#landing-text {font-size: 1.125rem ;}
+
+}
+
+/* Tablet Size: 768-1024px */
+@media (max-width: 1024px) {
+	.landing-section {
+		overflow: hidden;
+    min-height: 360px;
+		background-image: url("/images/landingbg-mobile.webp");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 60%;
+	}
+
+  #landing-body {
+    width: 100%;
+  }
+
+  #landing-slogan {font-size: 2.25rem ;}
+  #landing-sub-slogan {font-size: 1.75rem ;}
+  #landing-text {font-size: 1.125rem ;}
+}
+
+/* Mobile Size: 360-477px */
+@media (max-width: 478px) {
+  #landing-slogan {font-size: 2rem ;}
+  #landing-sub-slogan {font-size: 1.5rem ;}
+  #landing-text {font-size: 1rem ;}
+}
+
+/* Mini Mobile Size: below 360px  */
+@media (max-width: 360px) {
+  #landing-slogan {font-size: 1.5rem ;}
+  #landing-sub-slogan {font-size: 1.125rem ;}
+  #landing-text {font-size: 1rem ;}
+}

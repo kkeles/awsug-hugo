@@ -1,0 +1,21 @@
+<!-- CSS Reference: /assets/css/partials/contribute.css -->
+{{ $css := resources.Get "css/partials/contribute.css" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" />
+
+<section class="contribute-section">
+  <div class="contribute-slogan">
+    <p>Want to contribute to our community?</p>
+  </div>
+  <div class="contribute-items">
+    <div class="contribute-item speak">
+      <a href="https://bit.ly/awsug-talk">
+        <p>Present a Topic</p>
+      </a>
+    </div>
+    <div class="contribute-item host">
+      <a href="https://bit.ly/awsug-host">
+        <p>Host an Event</p>
+      </a>
+    </div>
+  </div>
+</section>

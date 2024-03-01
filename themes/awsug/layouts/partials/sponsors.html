@@ -1,0 +1,26 @@
+<!-- CSS Reference: /assets/css/partials/sponsors.css -->
+{{ $css := resources.Get "css/partials/sponsors.css" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" />
+
+<!-- List reference images for your sponsors below-->
+<!-- prettier-ignore -->
+{{ $sponsors := slice
+    (dict "name" "sponsor-1" "src" "1.png" "url" "https://www.example.com")
+    (dict "name" "sponsor-2" "src" "2.png" "url" "https://www.example.com")
+    (dict "name" "sponsor-3" "src" "3.png" "url" "https://www.example.com")
+    (dict "name" "sponsor-4" "src" "4.png" "url" "https://www.example.com")
+    (dict "name" "sponsor-5" "src" "5.png" "url" "https://www.example.com")
+  }}
+
+<section class="sponsors-section">
+	<h2 class="sponsors-title title">Recent Sponsors</h2>
+	<div class="sponsor-items">
+		{{ range $sponsors }}
+		<div class="sponsor-item">
+			<a href="{{ .url }}">
+				<img src="/images/sponsors/{{ .src }}" alt="{{ .name }} logo" />
+			</a>
+		</div>
+		{{ end }}
+	</div>
+</section>

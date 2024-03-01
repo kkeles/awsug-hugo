@@ -1,0 +1,136 @@
+.blogs-title {
+	font-size: 2rem;
+	font-family: "Amazon Ember Wide";
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2%;
+}
+
+#blogs-grid {
+	width: 95%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	align-items: start;
+	list-style-type: none;
+	gap: 20px;
+}
+
+.blog-object {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.blog-title {
+	font-family: "Amazon Ember Wide";
+	font-size: 1.25rem;
+	color: var(--colp-white);
+	justify-self: center;
+	align-self: center;
+	margin-bottom: 10px;
+}
+
+.blog-banner {
+	width: 100%;
+	height: 300px;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+	border: 2px solid var(--colp-gray);
+	border-radius: 10px;
+}
+
+.blog-abstract {
+	font-family: "Bookerly LCD";
+	font-weight: 200;
+	text-align: justify;
+}
+
+.blog-info-area {
+	display: flex;
+	flex-direction: row;
+	margin-top: 5px;
+	gap: 30px;
+}
+
+.blog-info {
+	display: flex;
+	align-items: center;
+}
+
+.blog-info-icon {
+	margin-top: 10px;
+}
+
+.blog-info-text {
+	font-family: "Amazon Ember Wide";
+	font-size: 1rem;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+	#blogs-grid {
+		align-self: center;
+	}
+	.blog-banner {
+		width: 100%;
+	}
+	.blog-abstract {
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.blogs-title {
+		font-size: 1.75rem;
+	}
+
+	#blogs-grid {
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+	}
+
+	.blog-object {
+		display: flex;
+		align-self: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.blogs-title {
+		font-size: 1.5rem;
+	}
+	.blog-object {
+		padding-right: 20px;
+	}
+	.blog-banner {
+		width: 100%;
+	}
+	.blog-title {
+		font-size: 1.25rem;
+	}
+	.blog-abstract {
+		font-size: 0.85rem;
+	}
+	.blog-info-text {
+		font-size: 0.85rem;
+	}
+}
+
+@media screen and (max-width: 468px) {
+	.blog-banner {
+		object-fit: contain;
+	}
+	.blog-title {
+		font-size: 1rem;
+	}
+	.blog-abstract {
+		font-size: 0.75rem;
+	}
+	.blog-info-text {
+		font-size: 0.75rem;
+	}
+}

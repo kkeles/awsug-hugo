@@ -1,0 +1,32 @@
+<header class="bottom-border">
+	<a href="/" id="headerlogo"><img src="/images/logo.png" alt="{{ .Title }}" /></a>
+	<div id="headernav">
+		<!-- Mobile Navigation Menu -->
+		<div class="headernav-mobile">
+			<button id="headernav-mobile-btn" onclick="mobileToggle()"></button>
+		</div>
+		<!-- Desktop Navigation Menu -->
+		{{ $page := . }}
+		<nav class="headernav-desktop">
+			<ul id="headernav-list">
+				{{ range site.Menus.main }} {{ $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+				{{ $active = or $active (eq .Name $page.Title) }}
+				<li {{ if $active }}class="active headernav-item" {{else}}class="headernav-item" {{ end }}>
+					<a href="{{ .URL }}">{{ .Name }}</a>
+				</li>
+				{{ end }}
+			</ul>
+		</nav>
+	</div>
+</header>
+<!--Mobile Nav Menu - hidden in default. Visible only when hamburger menu is clicked -->
+<div class="menu-mobile bottom-border">
+	<ul id="headernav-mobile-list" style="display: none">
+		{{ range site.Menus.main }} {{ $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+		{{$active = or $active (eq .Name $page.Title) }} {{ if (ne .Name "Home") }}
+		<li {{ if $active }}class="active headernav-item" {{else}}class="headernav-item" {{ end }}>
+			<a href="{{ .URL }}">{{ .Name }}</a>
+		</li>
+		{{ end }} {{ end }}
+	</ul>
+</div>

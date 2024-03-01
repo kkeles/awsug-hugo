@@ -1,0 +1,102 @@
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+  }
+  
+  .member-photo {
+    z-index: 1;
+    margin-bottom: calc(var(--circle-size) / 1.75 - var(--circle-size));
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border: 1px solid var(--colp-purple);
+    border-radius: 100%;
+    background: var(--cols-darknavy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .member-photo img {
+    height: calc(var(--circle-size) - 5%);
+    width: calc(var(--circle-size) - 5%);
+    border-radius: 100%;
+    opacity: 100%;
+  }
+  
+  .member-info-box {
+    height: 380px;
+    width: var(--box-width);
+    border: 1px solid var(--colp-purple);
+    border-radius: 5%;
+    padding-top: calc(var(--circle-size) * 0.4);
+    text-align: center;
+  }
+  
+  .member-badge {
+    line-height: 20%;
+  }
+  
+  .member-name {
+    font-family: "Amazon Ember Wide";
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    letter-spacing: 1%;
+  }
+  
+  .member-title {
+    font-family: "Amazon Ember Wide";
+    font-weight: bold;
+    font-style: normal;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    letter-spacing: 1%;
+  }
+  
+  .member-details {
+    padding-top: 2%;
+    font-family: "Bookerly LCD";
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    font-size: 1rem;
+    color: var(--colp-gray);
+    padding-left: calc(var(--circle-size) * 0.25);
+  }
+  
+  .member-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(var(--box-width)* 0.5);
+    width: var(--box-width);
+    margin-top: 10%;
+    border-top: 1px solid var(--colp-purple);
+  }
+  
+  .member-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .member-button img {
+    max-width: 150px;
+  }
+  
+  .member-button-text {
+    position: absolute;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--colp-white);
+    font-family: "Amazon Ember Wide";
+  }
+  

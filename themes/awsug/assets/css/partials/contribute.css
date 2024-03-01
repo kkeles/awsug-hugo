@@ -1,0 +1,117 @@
+.contribute-section {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0px;
+}
+
+.contribute-slogan {
+	font-family: "Bookerly LCD";
+	font-weight: 300;
+	font-size: 1.25rem;
+	color: var(--colp-white);
+	text-align: center;
+}
+
+.contribute-items {
+	display: flex;
+	align-items: center;
+}
+
+.contribute-item {
+	display: flex;
+	width: 45%;
+	margin: 0% 2.5%;
+	height: 150px;
+}
+
+.contribute-item a {
+	display: flex;
+	width: 100%;
+	z-index: 2;
+	justify-content: center;
+	align-items: center;
+}
+
+.contribute-item p {
+	z-index: 1;
+	font-size: 1.75rem;
+	font-family: "Amazon Ember Wide";
+	font-weight: bold;
+	color: var(--colp-white);
+	text-align: center;
+	margin: 0;
+	width: 100%;
+}
+
+.contribute-item p:hover {
+	color: var(--colp-gray);
+}
+
+.speak p {
+	margin-left: 20%;
+}
+
+.host p {
+	margin-right: 20%;
+}
+
+.speak {
+	background-image: url(/images/speech.webp);
+}
+
+.host {
+	background-image: url(/images/host.webp);
+}
+
+.speak,
+.host {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+/* Laptop Size: 1024-1440px */
+@media (max-width: 1440px) {
+	.contribute-item p {
+		font-size: 1.5rem;
+	}
+}
+
+/* Tablet Size: 768-1024px */
+@media (max-width: 1024px) {
+	.contribute-slogan {
+		font-size: 1.125rem;
+	}
+
+	.contribute-item p {
+		font-size: 1.25rem;
+	}
+}
+/* Mobile Size: 478-768px */
+@media (max-width: 768px) {
+	.contribute-items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contribute-item {
+		width: 80%;
+	}
+
+	.contribute-item p {
+		font-size: 1.25rem;
+	}
+}
+
+
+/* Mini Mobile Size: below 360px  */
+@media (max-width: 360px) {
+	.contribute-slogan {
+		font-size: 0.75rem;
+	}
+
+	.contribute-item p {
+		font-size: 0.75rem;
+	}
+}

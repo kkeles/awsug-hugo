@@ -1,0 +1,17 @@
+{{ define "main" }} {{ $css := resources.Get "css/single.css" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+
+<!-- prettier-ignore -->
+<div id="blog-date">
+{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Date | time.Format ":date_long" }}
+<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+</div>
+
+<article>
+	<h1 id="blog-title">{{ .Title }}</h1>
+
+	<div id="content">{{ .Content }}</div>
+</article>
+<!-- prettier-ignore -->
+{{ end }}

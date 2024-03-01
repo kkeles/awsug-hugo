@@ -1,0 +1,35 @@
+:root {
+	--circle-size: 125px;
+	--box-width: 15rem;
+}
+
+main {
+	display: flex;
+}
+
+.team-title {
+	font-size: 2rem;
+	font-family: "Amazon Ember Wide";
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2%;
+}
+
+.team-members {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+	grid-gap: 1.1rem;
+	padding: 2%;
+}
+
+@media screen and (max-width: 1024px) {
+	.team-title {
+		font-size: 1.75rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.team-title {
+		font-size: 1.5rem;
+	}
+}

@@ -1,0 +1,34 @@
+
+main {
+    margin: 1rem 2rem;
+}
+
+#blog-date{
+    font-family: "Amazon Ember Wide";
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+#blog-title {
+    font-family: "Amazon Ember Wide";
+}
+
+#content {
+    font-family: "Bookerly LCD";
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 200;
+    text-align: justify;
+}
+/* Mobile Size: 468-768px */
+@media (max-width: 768px) {
+}
+
+/* Mobile Size: 360-477px */
+@media (max-width: 478px) {
+
+}
+
+/* Mini Mobile Size: below 360px  */
+@media (max-width: 360px) {
+}

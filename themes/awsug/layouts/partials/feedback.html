@@ -1,0 +1,27 @@
+<!-- CSS Reference: /assets/css/partials/feedback.css -->
+{{ $css := resources.Get "css/partials/feedback.css" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" />
+
+<section class="feedback-section gradientbg side-padding">
+    <div class="feedback-left">
+      <div class="feedback-image">
+        <img src="/images/feedback.webp" alt="" />
+      </div>
+    </div>
+    <div class="feedback-right">
+        <h3 id="feedback-title">Your Community. Your Opinion.</h3>
+        <p id="feedback-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+          adipisci laborum expedita ducimus, sed dolorum, placeat amet
+          mollitia architecto natus saepe enim. Aspernatur, earum! Asperiores
+          in laudantium tenetur dolores ratione. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Quam, adipisci laborum expedita
+          ducimus, sed dolorum, placeat amet mollitia architecto natus saepe
+          enim.
+        </p>
+        <a id="feedback-button" href="/feedback.html">
+            <img src="/images/btnw.webp" alt="Feedback button" />
+            <p>Contact</p>
+        </a>
+    </div>
+  </section>

@@ -1,0 +1,355 @@
+/* General & 1440px+ */
+/* #region HEADER */
+header {
+	display: flex;
+	align-items: center; /* vertical center */
+	background-color: var(--colp-black);
+}
+
+#headerlogo {
+	width: 20%;
+	padding: 1% 2%;
+	pointer-events: none;
+}
+
+#headerlogo img {
+	width: 100%;
+	height: auto;
+}
+
+#headernav {
+	width: 80%;
+	margin-right: 15%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.headernav-desktop {
+	display: flex;
+	width: 100%;
+	text-align: center;
+}
+
+#headernav-list {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+#headernav-mobile-btn {
+	display: none;
+}
+
+#headernav-mobile-list {
+	display: none;
+	list-style-type: none;
+}
+
+.headernav-item {
+	font-family: "Amazon Ember Wide";
+	font-weight: 600;
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--colp-white);
+	margin-right: 20px;
+}
+
+.headernav-item :hover {
+	color: var(--colp-gray);
+}
+
+.headernav-item a {
+	text-decoration: none;
+	color: var(--colp-white);
+}
+
+.active a {
+	color: var(--colp-yellow);
+}
+/* #endregion HEADER */
+
+/* #region FOOTER */
+footer {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: space-around;
+	background-color: var(--colp-black);
+	color: var(--colp-white);
+	padding: 0px 10%; /* vertical horizontal */
+	padding-bottom: 30px;
+	font-family: "Amazon Ember Wide", sans-serif;
+	font-size: 1rem;
+}
+.footer-line {
+	width: 60%; /* Full width of the footer */
+	margin: 30px 20%;
+	height: 1px; /* Thin line */
+	background-color: var(--colp-gray);
+}
+
+.footer-content {
+	display: flex;
+}
+
+.footer-left {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+}
+
+.footer-right {
+	text-align: left;
+	width: 30%;
+}
+
+.footer-column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	line-height: 25px;
+}
+
+.footer-column h3 {
+	margin: 0 0 10px 0;
+	font-weight: 300;
+}
+
+.footer-column a {
+	color: var(--colp-gray);
+	text-decoration: none; /* prevent underline */
+	margin-bottom: 7%;
+}
+
+.footer-column a:hover {
+	color: var(--colp-yellow);
+}
+
+.footer-logo {
+	width: 200px;
+	height: auto;
+}
+
+.footer-disclaimer {
+	margin: 10;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.footer-social-items {
+	display: flex;
+	justify-content: space-around;
+	width: 200px;
+}
+.footer-social-item {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border: white solid 1px;
+	border-radius: 100%;
+}
+
+.footer-social-item img {
+	width: 60%;
+	height: auto;
+}
+
+.footer-city-icon {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 25%;
+}
+/* #endregion FOOTER */
+
+/* Laptop Size: 1024-1440px */
+@media (max-width: 1440px) {
+	#headerlogo {
+		width: 23%;
+	}
+
+	#headernav {
+		width: 77%;
+		margin-right: 10%;
+	}
+}
+
+/* Tablet Size: 768-1024px */
+@media (max-width: 1024px) {
+	#headerlogo {
+		width: 25%;
+	}
+
+	#headernav {
+		width: 75%;
+		margin-right: 7%;
+	}
+
+	.headernav-item {
+		font-size: 1rem;
+	}
+
+	footer {
+		padding: 0% 2%; /* vertical horizontal */
+		padding-bottom: 10px;
+	}
+
+	.footer-city-icon {
+		width: 35%;
+	}
+}
+
+/* Mobile Landscape Size: 478-768px */
+@media (max-width: 768px) {
+	footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0% 5%;
+	}
+
+	#headerlogo {
+		width: 30%;
+	}
+
+	#headernav {
+		width: 70%;
+		margin-right: 5%;
+	}
+
+	.headernav-item {
+		font-size: 0.7rem;
+	}
+
+	.footer-left {
+		flex-direction: column;
+		justify-content: start; /* vertical center */
+		align-items: center; /* horizontal center */
+		gap: 20px;
+		width: 40%;
+	}
+
+	.footer-right {
+		width: 60%;
+	}
+
+	.footer-column span {
+		display: none;
+	}
+
+	.footer-logo {
+		width: 80%;
+	}
+
+	.footer-social-item {
+		width: 28px;
+		height: 28px;
+	}
+
+	.footer-column h3 {
+		font-family: "Amazon Ember Wide";
+		font-weight: 400;
+		font-size: 0.85rem;
+	}
+
+	.footer-disclaimer {
+		font-size: 0.85rem;
+	}
+
+	.footer-city-icon {
+		width: 35%;
+	}
+}
+
+/* Mobile Size: 360-477px */
+@media (max-width: 478px) {
+	#headerlogo {
+		width: 40%;
+		pointer-events: all;
+	}
+
+	#headernav {
+		width: 60%;
+		margin-right: 3%;
+		justify-content: end;
+	}
+
+	.headernav-desktop {
+		display: none;
+	}
+
+	.menu-mobile {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#headernav-mobile-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+		grid-gap: 1rem;
+		align-items: center;
+		justify-content: center;
+		place-items: center;
+	}
+
+	.headernav-mobile {
+		background-image: url("/images/burger.webp");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		border: none;
+		width: 35px;
+		height: 35px;
+	}
+
+	#headernav-mobile-btn {
+		display: flex;
+		background: none;
+		border: none;
+		width: 100%;
+		height: 100%;
+	}
+
+	.footer-social-item {
+		width: 24px;
+		height: 24px;
+	}
+
+	.footer-column h3 {
+		font-family: "Amazon Ember Wide";
+		font-weight: 400;
+		font-size: 0.85rem;
+	}
+
+	.footer-disclaimer {
+		font-size: 0.75rem;
+	}
+}
+
+/* Mini Mobile Size: below 360px  */
+@media (max-width: 360px) {
+	header {
+		display: flex;
+		justify-content: stretch;
+	}
+
+	#headerlogo {
+		width: 45%;
+		padding: 2% 3%;
+	}
+
+	#headernav {
+		width: 55%;
+		margin-right: 2%;
+	}
+
+	.headernav-mobile {
+	width: 30px;
+	height: 30px;
+	}
+}

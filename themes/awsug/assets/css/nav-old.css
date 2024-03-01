@@ -1,0 +1,302 @@
+/* #region HEADER DESIGN */
+header {
+  display: flex;
+  align-items: center;
+  background-color: var(--colp-black);
+  padding: 1% 2%;
+  border-bottom: 1px solid var(--colp-purple);
+  height: 110px;
+}
+
+header img {
+  /* UG Logo image */
+  margin-left: 2%;
+  width: 250px;
+  height: auto;
+}
+
+#headernav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#headerlogo {
+  flex: 1;
+}
+
+.headernav {
+  flex: 2;
+  text-align: center;
+}
+
+#headernav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.headernav-item {
+  font-family: "Amazon Ember";
+  font-weight: 600;
+  font-size: var(--font-size-navbar);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--colp-white);
+  margin-right: 20px;
+}
+
+.headernav-item :hover {
+  color: var(--colp-gray);
+}
+
+.headernav-item a {
+  text-decoration: none;
+  color: var(--colp-white);
+}
+
+.active a{
+  color: var(--colp-yellow)
+}
+
+.spacer {
+  flex: 1;
+}
+/* #endregion */
+
+/* #region FOOTER DEFINITIONS */
+.footer {
+  background-color: var(--colp-black);
+  color: var(--colp-white);
+  padding: 5% 10%; /* vertical horizontal */
+  font-family: "Amazon Ember", sans-serif;
+  font-size: var(--font-size-footer);
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-line {
+    width: 60%;      /* Full width of the footer */
+    height: 1px;        /* Thin line */
+    background-color: var(--colp-gray);
+    position: absolute;
+    top: 10%;         /* Center vertically */
+    transform: translateY(-50%);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h3 {
+  margin: 0 0 10px 0;
+  font-weight: 300;
+}
+
+.footer-column a {
+  color: var(--colp-gray);
+  text-decoration: none; /* prevent underline */
+  margin-bottom: 7%;
+}
+
+.footer-column a:hover {
+  color: var(--colp-yellow);
+}
+
+.footer-right {
+  text-align: left;
+  width: 30%;
+}
+
+.footer-right img {
+    width: 200px;
+    height: auto;
+}
+
+.footer-right p {
+  margin: 10;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.footer-social-items {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.footer-social-item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: white solid 1px;
+    border-radius: 100%;
+}
+
+.footer-social-item img {
+    width: 20px;
+    height: 20px;
+
+}
+
+.footer-bg-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 320px; 
+}
+
+
+/* #endregion */
+
+@media (max-width: 600px) {
+  /* header */
+  
+  #headerlogo{
+    margin-left: 5px;
+    width: 180px;
+    height: auto;
+  }
+.headernav-item a{
+  font-size: 14px;
+}
+
+  /* footer  */
+  .footer {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 10% 5%; /* Increased vertical padding and reduced horizontal padding */
+    margin-bottom: 20px;
+  }
+
+  .footer-line {
+    width: 90%; /* Increased width for better visibility */
+    top: 3%; /* Adjusted to better fit the new layout */
+  }
+
+  .footer-column {
+    margin-bottom: 20px; /* Increased spacing between columns */
+    align-items: center; /* Center-align items for a cleaner look */
+    width: 100%; /* Full width for each column */
+  }
+
+  .footer-column h3 {
+    margin-bottom: 5px; /* Reduced margin for header */
+    text-decoration: underline; 
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .footer-column a {
+    margin-bottom: 5%; /* Reduced space between links */
+    font-size: 13px;
+  }
+
+  .footer-right {
+    justify-content: center;
+    text-align: center;
+    width: 100%; /* Full width */
+  }
+
+  .footer-right img {
+    width: 150px; /* Reduced logo size */
+  }
+
+  .footer-right p {
+    padding: 3px;
+    margin-bottom: 8px ; /* Reduced margin for paragraphs */
+    font-size: 12px;
+  }
+
+  .footer-social-items {
+    width: 60%; /* Adjusted width for social icons */
+    margin-top: 10px; /* Additional spacing above social icons */
+  }
+
+  .footer-social-item {
+    width: 24px; /* Reduced size for icons */
+    height: 24px;
+  }
+
+  .footer-social-item img {
+    width: 16px; /* Reduced image size inside icons */
+    height: 16px;
+  }
+
+  .footer-bg-image {
+    width: auto;
+    margin-top: 15px; /* Hide background image on mobile for cleaner look */
+  }
+}
+
+
+
+
+/* tablest */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .footer {
+    flex-direction: row; /* Use row layout for larger screens */
+    padding: 3% 5%; /* Adjust padding for tablets */
+    justify-content: space-between; /* Spread out the columns */
+  }
+
+  .footer-line {
+    width: 90%; /* Adjust the line width */
+    top: 5%; /* Adjust position */
+  }
+
+  .footer-column {
+    width: 20%; /* Adjust the width of each column */
+    align-items: flex-start; /* Align items to the start */
+    margin-bottom: 0; /* Remove the bottom margin */
+  }
+
+  .footer-column h3 {
+    margin-bottom: 10px; /* Adjust the margin */
+  }
+
+  .footer-column a {
+    margin-bottom: 3%; /* Adjust the space between links */
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%; /* Adjust width for right column */
+  }
+
+  .footer-right img {
+    width: 180px; /* Adjust logo size */
+  }
+
+  .footer-right p {
+    margin: 10px 0; /* Adjust paragraph margin */
+  }
+
+  .footer-social-items {
+    width: 70%; /* Adjust width of social icons container */
+    justify-content: space-around; /* Space out the icons */
+  }
+
+  .footer-social-item {
+    margin: 0 10px; /* Adjust margin around social icons */
+  }
+
+  .footer-bg-image {
+    display: none;
+  }
+}

@@ -1,0 +1,111 @@
+/* COLOR & FONT SIZE VARIABLES */
+:root {
+	--colp-black: #232f3e;
+	--colp-yellow: #ff9900;
+	--colp-white: #ffffff;
+	--colp-gray: #d8d8d8;
+	--colp-purple: #a66ff0;
+	--cols-black: #18212d;
+	--cols-darknavy: #27234c;
+	--cols-blackpurple: #4b3984;
+	--cols-darkpurple: #5b4398;
+	--cols-lightpurple: #a166ff;
+	--cols-purple: #a85dff;
+
+	--fontsz-h1: 4rem;
+	--fontsz-h2: 3rem;
+	--fontsz-text: 1.125rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+html,
+body {
+	width: 100%;
+	overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+body {
+  margin: 0;
+	background-color: var(--cols-darknavy);
+	color: var(--colp-white);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-padding {
+  padding: 0 5%;
+}
+
+.title {
+	font-family: "Amazon Ember Wide";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	letter-spacing: 0.15rem;
+}
+
+.round-icon {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border: white solid 1px;
+	border-radius: 100%;
+}
+
+.round-icon img {
+	width: 20px;
+	height: 20px;
+}
+
+.bottom-border {
+	border-bottom: 1px solid var(--colp-purple);
+}
+
+.gradientbg {
+	background: linear-gradient(
+		115deg,
+		var(--cols-darknavy) 0%,
+		var(--cols-darknavy) 50%,
+		var(--cols-purple) 51%,
+		var(--cols-purple) 51%,
+		#2b245a 52%,
+		#2b245a 71%,
+		var(--cols-blackpurple) 72%,
+		var(--cols-blackpurple) 91%,
+		var(--cols-darkpurple) 92%
+	);
+}
+
+.warm-img-filter {
+	filter: sepia(30%) hue-rotate(330deg) brightness(110%);
+}
+
+@media (max-width: 769px) {
+	:root {
+		--fontsz-h1: 32px;
+		--fontsz-h2: 20px;
+		--fontsz-h3: 18px;
+		--fontsz-h4: 15px;
+		--fontsz-body: 9px;
+		--fontsz-blog: 10px;
+		--fontsz-caption: 8px;
+		--fontsz-button: 9px;
+		--fontsz-navbar: 9px;
+		--fontsz-footer: 8px;
+		--fontsz-name: 11px;
+		--fontsz-title: 8px;
+		--fontsz-details: 8px;
+		--fontsz-sidebar: 9px;
+		--fontsz-quote: 10px;
+		--fontsz-code: 8px;
+	}
+}

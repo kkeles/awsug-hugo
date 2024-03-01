@@ -1,0 +1,36 @@
+{{ define "main" }} {{ $css := resources.Get "css/blog.css" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+<h2 class="blogs-title">Blog Posts</h2>
+{{ .Content }}
+<ul id="blogs-grid">
+	{{ range .Pages.ByPublishDate.Reverse }}
+	<li class="blog-object">
+		<a href="{{ .RelPermalink }}"
+			><h2 class="blog-title">{{ .LinkTitle }}</h2>
+			{{ if and .Params.thumbnailURL (strings.HasPrefix .Params.thumbnailURL "https://") }}
+			<img class="blog-banner" src="{{ .Params.thumbnailURL }}" alt="{{ .Title }} Banner" />
+			{{ else }} {{ with .Resources.GetMatch "banner.png" }}
+			<img class="blog-banner" src="{{ .RelPermalink }}" alt="{{ .Title }} Banner" />
+			<!-- prettier-ignore -->
+			{{ end }} 
+	{{ end }}
+		</a>
+		<div class="blog-abstract">{{ .Params.abstract }}</div>
+		<div class="blog-info-area">
+			<div class="blog-info">
+				<div class="blog-info-icon">
+					<img src="/images/icons/author.png" alt="" />
+				</div>
+				<div class="blog-info-text">{{ .Params.author }}</div>
+			</div>
+			<div class="blog-info">
+				<div class="blog-info-icon">
+					<img src="/images/icons/date.png" alt="" />
+				</div>
+				<div class="blog-info-text">{{ dateFormat "January 2, 2006" .Params.date }}</div>
+			</div>
+		</div>
+	</li>
+	{{end}}
+</ul>
+{{ end }}

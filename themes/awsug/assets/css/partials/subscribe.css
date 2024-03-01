@@ -1,0 +1,130 @@
+.subscribe-section {
+	min-height: 200px;
+	border-bottom: 3px solid var(--cols-blackpurple);
+	background-color: var(--colp-white);
+}
+
+.subscribe-slogan {
+	font-family: "Bookerly LCD";
+	font-weight: 300;
+	font-size: 1.25rem;
+	color: var(--cols-darknavy);
+	text-align: center;
+}
+
+.subscribe-items {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.subscribe-left {
+	width: 45%;
+}
+
+.subscribe-text {
+	font-family: "Bookerly LCD";
+	font-weight: 300;
+	font-size: 0.9rem;
+	color: var(--colp-black);
+	text-align: justify;
+}
+
+.subscribe-right {
+	display: flex;
+	place-content: center;
+	width: 45%;
+}
+
+.subscribe-form {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.form-element {
+	background-image: url("/images/btnp.webp");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	border: none;
+	color: #5a3472;
+	font-size: 1rem;
+	width: 140px;
+	height: 40px;
+	margin-right: 5px;
+  padding: 0px 10px;
+	outline: none;
+	text-align: center;
+	font-family: "Amazon Ember Wide";
+	font-weight: bold;
+}
+
+.btn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+/* Tablet Size: 768-1024px */
+@media (max-width: 1024px) {
+	.subscribe-slogan {
+		font-size: 1rem;
+	}
+
+  .form-element {
+    width: 100px ;
+    height: 40px ;
+  }
+  .btn {
+    width: 120px;
+  }
+
+}
+
+/* Mobile Size: 478-768px */
+@media (max-width: 768px) {
+  .subscribe-form {
+    flex-direction: column;
+  }
+  .btn {
+    margin-left: 0px;
+    width: 120px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile Size: 360-477px */
+@media (max-width: 478px) {
+  .subscribe-items {
+    flex-direction: column;
+  }
+  .subscribe-left,.subscribe-right {
+    width: 100%;
+  }
+
+  .subscribe-text {
+    font-size: 0.8rem;
+  }
+  .form-element {
+    font-size: 1rem;
+  }
+}
+
+/* Mini Mobile Size: below 360px  */
+@media (max-width: 360px) {
+  .subscribe-items {
+    flex-direction: column;
+  }
+  .subscribe-left,.subscribe-right {
+    width: 100%;
+  }
+
+  .subscribe-text {
+    font-size: 0.6rem;
+  }
+  .form-element {
+    font-size: 0.75rem;
+  }
+}

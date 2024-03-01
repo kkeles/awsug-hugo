@@ -1,0 +1,35 @@
+<!-- CSS Reference: /assets/css/partials/subscribe.css -->
+{{ $css := resources.Get "css/partials/subscribe.css" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" />
+
+
+<section class="subscribe-section side-padding">
+    <div class="subscribe-slogan">
+      <p>Subscribe to our Newsletter</p>
+    </div>
+    <div class="subscribe-items">
+      <div class="subscribe-left">
+        <p class="subscribe-text">
+          If you want to catch your spot for our next event before it's booked out, here is your opportunity!
+          We also would like to keep you updated on our important updates from time to time. Join our community and receive regular info!
+        </p>
+      </div>
+      <div class="subscribe-right">
+        <form class="subscribe-form">
+          <input
+            type="text"
+            class="form-element"
+            placeholder="Your Name"
+          />
+          <input
+            type="email"
+            class="form-element"
+            placeholder="Your Email"
+          />
+          <button type="submit" class="form-element btn">
+            <span>Subscribe</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
