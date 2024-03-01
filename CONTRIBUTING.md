@@ -1,5 +1,5 @@
 # Contributing
-
+For Contribution:
 1. Create a fork of the repo: https://github.com/kkeles/awsug-hugo/fork
 2. Create a local development repo based on the `exampleSite`
 ```bash
